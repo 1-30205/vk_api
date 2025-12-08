@@ -19,9 +19,9 @@ target_include_directories(
         include
 )
 
-find_package(VulkanHeaders CONFIG)
-find_package(volk CONFIG REQUIRED)
-find_package(VulkanMemoryAllocator CONFIG REQUIRED)
+add_subdirectory(thirdparty/Vulkan-Headers)
+add_subdirectory(thirdparty/volk)
+add_subdirectory(thirdparty/VulkanMemoryAllocator)
 
 target_link_libraries(
     vk_api
